@@ -1,7 +1,7 @@
   services:
     CyGroupGs2_Database:
       image: postgres:latest
-      container_name: 68-s2-database
+      container_name: CyGroupGs2_Database
       ports:
         - "${DATABASE_PORT}:5432"
       environment:
