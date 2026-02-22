@@ -1,10 +1,29 @@
   services:
     CyGroupGs2_Database:
       image: postgres:latest
-      container_name: 68-s2-database
+      container_name: CyGroupGs2_Database
       ports:
         - "${DATABASE_PORT}:5432"
       environment:
         POSTGRES_USER: ${DATABASE_USER}
         POSTGRES_PASSWORD: ${DATABASE_PASS}
         POSTGRES_DB: ${DATABASE_NAME}
+
+    CyGroupGs2_PgAdmin4:
+      image: dpage/pgadmin4
+      container_name: CyGroupGs2_PgAdmin4
+      ports:
+        - ${ADMIN_PORT}:80
+      environment:
+        PGADMIN_DEFAULT_EMAIL: ${PGADMIN_EMAIL}
+        PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_PASS}
+
+    CyGroupGs2_Starpi:
+        image: prawee/strapi:latest
+        container_name: CyGroupGs2_Strapi
+        ports:
+          - ${APP_PORT}:8090
+        environment:
+          PGADMIN_DEFAULT_EMAIL: ${PGADMIN_EMAIL}
+          PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_PASS}
+
