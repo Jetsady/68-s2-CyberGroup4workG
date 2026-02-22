@@ -4,7 +4,7 @@
   -  Jetsadaporn Chanwises
   -  Peerapol Seelalo
   -  Saranpat Perdchan
-  -  NATHAPONG CHAWEECHAN
+  -  Nathapong Chaweechan
 
 ## Environment
 ```sh
