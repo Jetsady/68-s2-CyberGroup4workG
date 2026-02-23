@@ -18,3 +18,12 @@
         PGADMIN_DEFAULT_EMAIL: ${PGADMIN_EMAIL}
         PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_PASS}
 
+    CyGroupGs2_Starpi:
+        image: prawee/strapi:latest
+        container_name: CyGroupGs2_Strapi
+        ports:
+          - ${APP_PORT}:8090
+        environment:
+          PGADMIN_DEFAULT_EMAIL: ${PGADMIN_EMAIL}
+          PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_PASS}
+
